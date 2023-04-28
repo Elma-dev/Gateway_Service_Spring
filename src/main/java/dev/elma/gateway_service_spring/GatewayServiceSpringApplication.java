@@ -16,7 +16,7 @@ public class GatewayServiceSpringApplication {
         SpringApplication.run(GatewayServiceSpringApplication.class, args);
     }
 
-    //Static Routes without Eureka
+    /**Static Routes without Eureka**/
     /*
     @Bean
     RouteLocator routeLocator(RouteLocatorBuilder builder){
@@ -28,7 +28,8 @@ public class GatewayServiceSpringApplication {
     }
      */
 
-    //Static Routes with Eureka
+    /**Static Routes with Eureka**/
+    /*
     @Bean
     RouteLocator routeLocator(RouteLocatorBuilder builder){
         return builder.routes()
@@ -37,8 +38,9 @@ public class GatewayServiceSpringApplication {
                 .build();
 
     }
+     */
 
-    //Dynamic Method with Eureka
+    /**Dynamic Method with Eureka**/
     DiscoveryClientRouteDefinitionLocator discoveryClientRouteDefinitionLocator(ReactiveDiscoveryClient rdc, DiscoveryLocatorProperties properties){
         return new DiscoveryClientRouteDefinitionLocator(rdc,properties);
     }
