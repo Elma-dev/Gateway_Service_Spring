@@ -41,6 +41,7 @@ public class GatewayServiceSpringApplication {
      */
 
     /**Dynamic Method with Eureka**/
+    @Bean
     DiscoveryClientRouteDefinitionLocator discoveryClientRouteDefinitionLocator(ReactiveDiscoveryClient rdc, DiscoveryLocatorProperties properties){
         return new DiscoveryClientRouteDefinitionLocator(rdc,properties);
     }
